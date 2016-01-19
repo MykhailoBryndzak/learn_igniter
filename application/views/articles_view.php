@@ -6,5 +6,8 @@
     <p><?= $item ['text']; ?></p>
     <p><?= $item ['date']; ?></p>
 <?php endforeach; ?>
+
+<?= $this->pagination->create_links(); ?>
+
 </body>
 </html>

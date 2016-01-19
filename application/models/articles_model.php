@@ -4,11 +4,11 @@
 class Articles_model extends CI_Model
 {
 
-    public function get_articles()
+    public function get_articles($num, $offset)
     {
         $this->db->limit('4');
-        $this->db->order_by('id','random');
-        $query = $this->db->get('articles');
+        $this->db->order_by('id');
+        $query = $this->db->get('articles', $num, $offset);
         return $query->result_array();
 
     }
